@@ -1,4 +1,6 @@
 <?php
+$input = '3+4+5';
+echo evaluate(tree($input));
 function isF($char)
 {
   if ($char=='+' || $char=='-' || $char=='*' || $char=='/' || $char=='^')
@@ -6,8 +8,6 @@ function isF($char)
   else
     return false;
 }
-
-
 function unbracket($term)
 {
   if (substr($term,0,1) == '(' && substr($term,strlen($term)-1,strlen($term))==')')
@@ -138,10 +138,5 @@ function simplify($term)
     }
   }
 }
-echo is_real('34.5');
 
-$input='3*(5-3/2)*6';
-print_r (tree($input));
-echo evaluate(tree($input));
-//print_r(simplify(tree($input)));
 ?>
