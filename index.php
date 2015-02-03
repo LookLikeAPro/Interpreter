@@ -1,6 +1,7 @@
 <?php
-$input = '3+4+5';
-echo evaluate(tree($input));
+$input = '((3+4)/2)^2-6/8+5';
+echo "Input: ".$input."\n";
+echo "Output: ".evaluate(tree($input));
 function isF($char)
 {
   if ($char=='+' || $char=='-' || $char=='*' || $char=='/' || $char=='^')
